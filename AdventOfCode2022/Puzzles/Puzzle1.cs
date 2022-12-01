@@ -4,19 +4,21 @@
     {
         public Puzzle1()
         {
-            // Initialise arrays //
-            string[] itemCaloriesPerElf;
+            // Read input //
+            string input;          
             using (FileStream fs = new FileStream(@"Inputs\Puzzle1.txt", FileMode.Open))
             {
-                itemCaloriesPerElf = new StreamReader(fs).ReadToEnd().Split("\r\n\r\n"); // {"2000\r\n3000", "1000\r\n3000"}
+                input = new StreamReader(fs).ReadToEnd(); 
             }
+            //
 
-            int[] totalCaloriesPerElf = new int[itemCaloriesPerElf.Length]; // {5000, 4000}
+            string[] itemCaloriesPerElf = input.Split("\r\n\r\n");          // {"2000\r\n3000", "1000\r\n3000"}
+            int[] totalCaloriesPerElf = new int[itemCaloriesPerElf.Length]; // {5000          , 4000          }
 
             // Add each elf's calorie items up for the total //
             for (int i = 0; i < itemCaloriesPerElf.Length; i++)
             {
-                string[] calories = itemCaloriesPerElf[i].Split("\r\n"); // {"2000", "3000"}
+                string[] calories = itemCaloriesPerElf[i].Split("\r\n"); // {"2000", "3000"}, {"1000", "3000"}
                 for (int j = 0; j < calories.Length; j++)
                 {
                     totalCaloriesPerElf[i] += int.Parse(calories[j]);
