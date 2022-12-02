@@ -33,7 +33,7 @@
                 $"2nd: {totalCaloriesPerElf[totalCaloriesPerElf.Length - 2]}\n" +
                 $"3rd: {totalCaloriesPerElf[totalCaloriesPerElf.Length - 3]}\n" +
 
-                string.Format("\nTotal: {0}",
+                string.Format("\nTotal: {0}\n",
                     totalCaloriesPerElf[totalCaloriesPerElf.Length - 1] +
                     totalCaloriesPerElf[totalCaloriesPerElf.Length - 2] +
                     totalCaloriesPerElf[totalCaloriesPerElf.Length - 3]
