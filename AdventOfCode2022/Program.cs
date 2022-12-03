@@ -2,8 +2,16 @@
 
 namespace AdventOfCode2022
 {
-    internal class Program
+    internal static class Program
     {
+        public static string ReadFile(string path)
+        {
+            using (FileStream fs = new FileStream(path, FileMode.Open))
+            {
+                return new StreamReader(fs).ReadToEnd();
+            }
+        }
+
         private static void Main(string[] args)
         {
             Console.Write("Enter a puzzle number: ");
@@ -26,6 +34,10 @@ namespace AdventOfCode2022
 
                 case 2:
                     new Puzzle2();
+                    break;
+
+                case 3:
+                    new Puzzle3();
                     break;
 
                 default:

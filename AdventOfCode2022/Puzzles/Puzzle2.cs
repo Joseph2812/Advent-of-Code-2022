@@ -11,13 +11,7 @@
 
         public Puzzle2()
         {
-            // Read input //
-            string input;
-            using (FileStream fs = new FileStream(@"Inputs\Puzzle2.txt", FileMode.Open))
-            {
-                input = new StreamReader(fs).ReadToEnd();
-            }
-            //
+            string input = Program.ReadFile(@"Inputs\Puzzle2.txt");
 
             string[] rounds = input.Split("\r\n"); // {"A Z", "B X"}
             int enemyScore = 0, myScore = 0;

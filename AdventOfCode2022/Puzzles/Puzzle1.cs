@@ -4,13 +4,7 @@
     {
         public Puzzle1()
         {
-            // Read input //
-            string input;          
-            using (FileStream fs = new FileStream(@"Inputs\Puzzle1.txt", FileMode.Open))
-            {
-                input = new StreamReader(fs).ReadToEnd(); 
-            }
-            //
+            string input = Program.ReadFile(@"Inputs\Puzzle1.txt");
 
             string[] itemCaloriesPerElf = input.Split("\r\n\r\n");          // {"2000\r\n3000", "1000\r\n3000"}
             int[] totalCaloriesPerElf = new int[itemCaloriesPerElf.Length]; // {5000          , 4000          }
