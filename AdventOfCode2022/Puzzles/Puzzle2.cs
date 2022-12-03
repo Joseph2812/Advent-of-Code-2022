@@ -18,11 +18,11 @@
             int enemyScoreP2 = 0, myScoreP2 = 0;
 
             // Calculate the score depending on the scenarios //
-            for (int i = 0; i < rounds.Length; i++)
+            foreach (string round in rounds)
             {
                 // Part 1 //
-                Move enemyMove = GetMove(rounds[i][0]);
-                Move myMove = GetMove(rounds[i][2]);
+                Move enemyMove = GetMove(round[0]);
+                Move myMove = GetMove(round[2]);
 
                 (int enemyRoundScore, int myRoundScore) = GetResult(enemyMove, myMove);
 
@@ -30,7 +30,7 @@
                 myScore += (int)myMove + myRoundScore;
 
                 // Part 2 //
-                myMove = GetOptimalMove(rounds[i][2], enemyMove);
+                myMove = GetOptimalMove(round[2], enemyMove);
 
                 (enemyRoundScore, myRoundScore) = GetResult(enemyMove, myMove);
 

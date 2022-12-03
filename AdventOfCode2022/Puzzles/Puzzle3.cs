@@ -10,45 +10,24 @@
 
             // Part 1 //
             int allPriority = 0;
-            for (int i = 0; i < rucksacks.Length; i++)
+            foreach (string rucksack in rucksacks)
             {
-                int halfLength = rucksacks[i].Length / 2;
-                string compartment1 = rucksacks[i].Substring(0, halfLength);
-                string compartment2 = rucksacks[i].Substring(halfLength);
+                // Split string in half //
+                int halfLength = rucksack.Length / 2;
+                string compartment1 = rucksack.Substring(0, halfLength);
+                string compartment2 = rucksack.Substring(halfLength);
+                //
 
-                for (int j = 0; j < compartment1.Length; j++)
-                {
-                    if (compartment2.Contains(compartment1[j]))
-                    {
-                        allPriority += GetPriority(compartment1[j]);
-                        break;
-                    }
-                }              
+                char commonChar = compartment1.Intersect(compartment2).First();
+                allPriority += GetPriority(commonChar);
             }
 
             // Part 2 //
             int allPriorityP2 = 0;
             for (int i = 0; i < rucksacks.Length; i += 3)
             {
-                // Check what 1st & 2nd have in common //
-                List<char> commonChar1st2nd = new List<char>();
-                for (int j = 0; j < rucksacks[i].Length; j++)
-                {
-                    if (rucksacks[i + 1].Contains(rucksacks[i][j]))
-                    {
-                        commonChar1st2nd.Add(rucksacks[i][j]);
-                    }
-                }
-
-                // Check what 1st & 2nd have in common WITH the 3rd //
-                for (int j = 0; j < commonChar1st2nd.Count; j++)
-                {
-                    if (rucksacks[i + 2].Contains(commonChar1st2nd[j]))
-                    {
-                        allPriorityP2 += GetPriority(commonChar1st2nd[j]);
-                        break;
-                    }
-                }
+                char commonChar = rucksacks[i].Intersect(rucksacks[i + 1]).Intersect(rucksacks[i + 2]).First();
+                allPriorityP2 += GetPriority(commonChar);
             }
             //
 
