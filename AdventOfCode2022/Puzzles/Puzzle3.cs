@@ -32,7 +32,7 @@
             //
 
             Console.Write(
-                "=== Rucksack Reorganization Priorities ===\n" +
+                "=== Rucksack Reorganization: Priorities ===\n" +
                 $"Part 1: {allPriority}\n" +
                 $"Part 2: {allPriorityP2}\n"
             );

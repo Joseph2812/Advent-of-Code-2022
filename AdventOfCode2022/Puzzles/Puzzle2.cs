@@ -40,11 +40,11 @@
             //
 
             Console.Write(
-                "=== Rock, Paper, Scissors [Part 1] Results ===\n" +
+                "=== Rock, Paper, Scissors [Part 1]: Results ===\n" +
                 $"Enemy score: {enemyScore}\n" +
                 $"My score: {myScore}\n" +
 
-                "\n=== Rock, Paper, Scissors [Part 2] Results ===\n" +
+                "\n=== Rock, Paper, Scissors [Part 2]: Results ===\n" +
                 $"Enemy score: {enemyScoreP2}\n" +
                 $"My score: {myScoreP2}\n"
             );

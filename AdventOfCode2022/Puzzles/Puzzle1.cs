@@ -22,7 +22,7 @@
             // Find the top 3 calorie holding elfs, and get the grand total //
             Array.Sort(totalCaloriesPerElf);
             Console.Write(
-                "=== Top 3 Calorie Holding Elfs ===\n" +
+                "=== Calorie Counting: Top 3 Calorie Holding Elfs ===\n" +
                 $"1st: {totalCaloriesPerElf[totalCaloriesPerElf.Length - 1]}\n" +
                 $"2nd: {totalCaloriesPerElf[totalCaloriesPerElf.Length - 2]}\n" +
                 $"3rd: {totalCaloriesPerElf[totalCaloriesPerElf.Length - 3]}\n" +
