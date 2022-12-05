@@ -7,5 +7,6 @@ The main program allows you to select a puzzle using its assigned number
 2. Rock Paper Scissors
 3. Rucksack Reorganization
 4. Camp Cleanup
+5. Supply Stacks
 
 The Inputs folder should be placed in the **same** directory as the created executable
