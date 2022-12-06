@@ -38,9 +38,9 @@
             );
         }
 
-        private int GetPriority(char a)
+        private int GetPriority(char c)
         {
-            return (a < 97) ? (a - 38) : (a - 96);
+            return (c < 97) ? (c - 38) : (c - 96);
         }
     }
 }
