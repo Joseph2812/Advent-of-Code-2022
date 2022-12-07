@@ -9,5 +9,6 @@ The main program allows you to select a puzzle using its assigned number
 4. Camp Cleanup
 5. Supply Stacks
 6. Tuning Trouble
+7. No Space Left On Device
 
 The Inputs folder should be placed in the **same** directory as the created executable
