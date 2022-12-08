@@ -2,7 +2,7 @@
 {
     public class Puzzle6
     {
-        private string _signal;
+        private readonly string _signal;
 
         public Puzzle6()
         {

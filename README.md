@@ -10,5 +10,6 @@ The main program allows you to select a puzzle using its assigned number
 5. Supply Stacks
 6. Tuning Trouble
 7. No Space Left On Device
+8. Treetop Tree House
 
 The Inputs folder should be placed in the **same** directory as the created executable

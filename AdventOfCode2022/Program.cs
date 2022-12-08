@@ -56,6 +56,10 @@ namespace AdventOfCode2022
                     new Puzzle7();
                     break;
 
+                case 8:
+                    new Puzzle8();
+                    break;
+
                 default:
                     Console.WriteLine($"Puzzle{puzzleNumber} does not exist");
                     break;
