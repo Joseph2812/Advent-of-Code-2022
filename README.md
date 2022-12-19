@@ -1,5 +1,5 @@
 # Advent of Code 2022
-This contains all the solutions to each puzzle in C#  
+This contains the solutions up to puzzle 8 in C#  
 The main program allows you to select a puzzle using its assigned number
 
 ## Puzzles:
